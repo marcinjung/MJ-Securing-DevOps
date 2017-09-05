@@ -45,8 +45,8 @@ deployment:
       - cp "$GOPATH_HEAD/bin/${CIRCLE_PROJECT_REPONAME}" bin/invoicer
       - echo ${DOCKER_USER}/${CIRCLE_PROJECT_REPONAME}
       #  marcinjung/MJ-Securing-DevOps
-      # - docker build -t ${DOCKER_USER}/${CIRCLE_PROJECT_REPONAME} .
-      - docker build -t marcinjung/MJ-Securing-DevOps .
+      - docker build -t ${CIRCLE_PROJECT_REPONAME} .
+      # - docker build -t marcinjung/MJ-Securing-DevOps:tag .
       # write the sha256 sum to an artifact to make image verification easier
       - >
         docker images --no-trunc | awk '/^app/ {print $3}' |

@@ -46,7 +46,7 @@ deployment:
       - echo ${DOCKER_USER}/${CIRCLE_PROJECT_REPONAME}
       - echo ${DOCKER_REPO}
       #  marcinjung/MJ-Securing-DevOps
-      - docker build -t {DOCKER_USER}/${CIRCLE_PROJECT_REPONAME} .
+      - docker build -t ${CIRCLE_PROJECT_REPONAME} .
       # - docker build -t marcinjung/MJ-Securing-DevOps:tag .
       # write the sha256 sum to an artifact to make image verification easier
       - >

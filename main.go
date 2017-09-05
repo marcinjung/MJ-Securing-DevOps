@@ -34,7 +34,7 @@ func main() {
 	)
 	var db *gorm.DB
 	if os.Getenv("INVOICER_USE_POSTGRES") != "" {
-		log.Println("2 Opening postgres connection")
+		log.Println("3 Opening postgres connection")
 		db, err = gorm.Open("postgres", fmt.Sprintf("postgres://%s:%s@%s/%s?sslmode=%s",
 			os.Getenv("INVOICER_POSTGRES_USER"),
 			os.Getenv("INVOICER_POSTGRES_PASSWORD"),
